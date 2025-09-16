@@ -1,5 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ClubCard from "@/components/ClubCard";
+import EventsSection from "@/components/EventsSection";
+import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
@@ -137,17 +139,17 @@ const clubsData = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-background">
+    <div className="min-h-screen bg-background">
       <HeroSection />
       
       <main id="clubs-section" className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-accent" />
-            <h2 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent">
+            <Sparkles className="w-8 h-8 text-primary" />
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Our Student Clubs
             </h2>
-            <Sparkles className="w-8 h-8 text-accent" />
+            <Sparkles className="w-8 h-8 text-primary" />
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Join our vibrant community of learners, creators, and innovators. 
@@ -174,23 +176,26 @@ const Index = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Ready to Join?</h3>
+          <div className="bg-card shadow-lg rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Join?</h3>
             <p className="text-muted-foreground mb-6">
               Take the first step towards an amazing college experience. 
               Choose your club and start your journey today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="gradient-primary text-white font-semibold">
+              <Button className="font-semibold">
                 Contact Club Coordinators
               </Button>
-              <Button variant="outline" className="border-white/30 backdrop-blur-sm">
+              <Button variant="outline">
                 Learn More About MITS
               </Button>
             </div>
           </div>
         </div>
       </main>
+      
+      <EventsSection />
+      <Footer />
     </div>
   );
 };
