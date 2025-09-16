@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { GraduationCap, Mail, User, Hash, Building2, Clock } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface RegistrationModalProps {
   isOpen: boolean;
@@ -81,9 +82,33 @@ const RegistrationModal = ({ isOpen, onClose, clubName }: RegistrationModalProps
     setIsSubmitting(true);
 
     try {
-      // Here you would normally send the data to your backend
-      // For now, we'll simulate a successful registration
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Insert registration data into Supabase
+      const { error } = await supabase
+        .from('club_registrations')
+        .insert({
+          name: formData.name,
+          enrollment_number: formData.enrollmentNumber,
+          branch: formData.branch,
+          year: formData.year,
+          email: formData.email,
+          reason_to_join: formData.reasonToJoin,
+          club_name: clubName
+        });
+
+      if (error) {
+        // Handle specific database errors
+        if (error.code === '23505') {
+          // Unique constraint violation (enrollment number already exists)
+          toast({
+            title: "Registration Failed",
+            description: "This enrollment number is already registered. Each student can only register once per club.",
+            variant: "destructive"
+          });
+        } else {
+          throw error;
+        }
+        return;
+      }
       
       toast({
         title: "Registration Successful! 🎉",
@@ -101,6 +126,7 @@ const RegistrationModal = ({ isOpen, onClose, clubName }: RegistrationModalProps
       });
       onClose();
     } catch (error) {
+      console.error('Registration error:', error);
       toast({
         title: "Registration Failed",
         description: "Something went wrong. Please try again later.",
