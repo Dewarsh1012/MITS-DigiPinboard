@@ -1,7 +1,8 @@
 🗓️ Eventsite | MITS
 Your one-stop portal for clubs, events, and recruitment drives at MITS. Eventsite centralizes all campus buzz into a single, user-friendly platform, ensuring you never miss an opportunity.
 
-<p align="center"><i>[Add a screenshot of your project's homepage here!]</i></p>
+<p align="center"><i>[<img width="1470" height="745" alt="image" src="https://github.com/user-attachments/assets/b6b9c419-148c-4982-b917-41fde54925ee" />
+]</i></p>
 
 ✨ Features
 🏢 Club Directory: Browse a complete directory of all campus clubs.
@@ -20,7 +21,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/[your-github-use]/eventsite.git
+gh repo clone Dewarsh1012/Eventsite-MITS
 Navigate and Install:
 
 Bash
