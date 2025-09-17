@@ -1,74 +1,44 @@
-# Welcome to your Lovable project
+🗓️ Eventsite | MITS
+Your one-stop portal for clubs, events, and recruitment drives at MITS. Eventsite centralizes all campus buzz into a single, user-friendly platform, ensuring you never miss an opportunity.
 
-## Project info
+<p align="center"><i>[Add a screenshot of your project's homepage here!]</i></p>
 
-**URL**: https://lovable.dev/projects/b8770fd0-8597-4ec1-b90d-096e7b573248
+✨ Features
+🏢 Club Directory: Browse a complete directory of all campus clubs.
 
-## How can I edit this code?
+📅 Event Calendar: Stay updated with an interactive calendar of all workshops, fests, and competitions.
 
-There are several ways of editing your application.
+🚀 Recruitment Hub: Find and apply for openings and recruitment drives in various clubs.
 
-**Use Lovable**
+📱 Fully Responsive: Works seamlessly on desktop, tablet, and mobile.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b8770fd0-8597-4ec1-b90d-096e7b573248) and start prompting.
+🛠️ Tech Stack
+Built with Vite, React, TypeScript, Tailwind CSS, and shadcn-ui.
 
-Changes made via Lovable will be committed automatically to this repo.
+🚀 Getting Started Locally
+Clone the repository:
 
-**Use your preferred IDE**
+Bash
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+git clone https://github.com/[your-github-use]/eventsite.git
+Navigate and Install:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Bash
 
-Follow these steps:
+cd eventsite
+npm install
+Run the dev server:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Bash
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
+The project will be running at http://localhost:5173.
 
-**Edit a file directly in GitHub**
+🚢 Deployment
+This Vite + React project is ready to deploy on any static site hosting service. Recommended platforms include:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Vercel
 
-**Use GitHub Codespaces**
+Netlify
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b8770fd0-8597-4ec1-b90d-096e7b573248) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-# DigiPinboard-MITS
+GitHub Pages
